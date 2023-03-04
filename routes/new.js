@@ -4,7 +4,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.send('index');
+  res.render('form',{title: "Mini Messageboard"});
 });
 
 module.exports = router;

@@ -19,4 +19,13 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: "Mini Messageboard", messages: messages });
 });
 
+router.post('/new', (req, res) => {
+  var messageText = req.body.messageText
+  var messageUser =req.body.messageUser
+  messages.push({text: messageText, user: messageUser, added: new Date()});
+  res.redirect('/')
+})
+
+
+
 module.exports = router;

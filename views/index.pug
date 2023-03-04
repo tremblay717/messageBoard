@@ -4,12 +4,17 @@ block content
   h1= title
   p Welcome to #{title}
 
+  h2 All messages :
   div 
     each val in messages
       ul
         h3= val.text
         p Name: #{val.user}
         p Date added: #{val.added}
+  br
+  
+  
+  a(href="/new") Add new message
 
       
   
